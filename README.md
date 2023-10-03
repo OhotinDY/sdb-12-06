@@ -43,3 +43,9 @@ bind-address	= 0.0.0.0
 server-id	= 1
 log_bin		= /var/log/mysql/mysql-bin.log
 ```
+
+![sql](https://github.com/OhotinDY/sdb-12-06/blob/main/sql4.png)
+
+Проверка статуса mysql:
+
+![sql](https://github.com/OhotinDY/sdb-12-06/blob/main/sql3.png)
