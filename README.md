@@ -49,3 +49,41 @@ log_bin		= /var/log/mysql/mysql-bin.log
 Запуск и проверка статуса mysql:
 
 ![sql](https://github.com/OhotinDY/sdb-12-06/blob/main/sql3.png)
+
+Выполнение входа в mysql
+
+```
+mysql -u root -p
+```
+
+Создание пользователя для репликации
+
+```
+CREATE USER 'replica_user'@'%' IDENTIFIED WITH mysql_native_password BY 'REPpas';
+```
+
+Предоставление пользователю минимально необходимых привелегий
+
+```
+GRANT REPLICATION SLAVE ON *.* TO 'replica_user'@'%';
+```
+
+Обновление загруженных в память данных о привилегиях 
+
+```
+FLUSH PRIVILEGES;
+```
+
+Закрытие всех открытых таблиц и блокировка доступа для чтения всех таблиц для всех баз данных
+
+```
+FLUSH TABLES WITH READ LOCK;
+```
+
+Запуск команды, которая возвращает информацию о текущем состоянии бинарных файлов логов для source
+
+```
+SHOW MASTER STATUS;
+```
+
+![sql](https://github.com/OhotinDY/sdb-12-06/blob/main/sql5.png)
