@@ -74,12 +74,6 @@ GRANT REPLICATION SLAVE ON *.* TO 'replica_user'@'%';
 FLUSH PRIVILEGES;
 ```
 
-Закрытие всех открытых таблиц и блокировка доступа для чтения всех таблиц для всех баз данных
-
-```
-FLUSH TABLES WITH READ LOCK;
-```
-
 Запуск команды, которая возвращает информацию о текущем состоянии бинарных файлов логов для source
 
 ```
@@ -87,3 +81,22 @@ SHOW MASTER STATUS;
 ```
 
 ![sql](https://github.com/OhotinDY/sdb-12-06/blob/main/sql5.png)
+
+Запуск команды с настройками репликации
+
+```
+CHANGE REPLICATION SOURCE TO
+SOURCE_HOST='10.129.0.13',
+SOURCE_USER='replica_user',
+SOURCE_PASSWORD='pass',
+SOURCE_LOG_FILE='binlog.000002',
+SOURCE_LOG_POS=1034;
+```
+
+Запуск команды для активации репликации
+
+```
+START REPLICA;
+```
+
+![sql](https://github.com/OhotinDY/sdb-12-06/blob/main/sql6.png)
