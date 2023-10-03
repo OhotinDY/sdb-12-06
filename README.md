@@ -46,6 +46,6 @@ log_bin		= /var/log/mysql/mysql-bin.log
 
 ![sql](https://github.com/OhotinDY/sdb-12-06/blob/main/sql4.png)
 
-Проверка статуса mysql:
+Запуск и проверка статуса mysql:
 
 ![sql](https://github.com/OhotinDY/sdb-12-06/blob/main/sql3.png)
