@@ -22,5 +22,7 @@
 
 Создание ВМ в Yandex Cloude:
 
-![sql]()
+![sql](https://github.com/OhotinDY/sdb-12-06/blob/main/sql1.png)
+
+![sql](https://github.com/OhotinDY/sdb-12-06/blob/main/sql2.png)
 
